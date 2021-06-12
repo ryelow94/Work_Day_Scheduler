@@ -3,7 +3,9 @@ const currentTimeAndDate = document.getElementById("currentDay")
 
 currentTimeAndDate.textContent = moment().format('MMMM Do YYYY, h:mm:ss a'); 
 
-const timeBlockContainer = document.querySelector(".container")
+const timeBlockContainer = document.querySelector(".container") 
+const currentTime = moment().hour(); 
+console.log(currentTime)
 //make a function that creates Timeblocks
 function makeTimeBlock(){
     for (let i = 9; i <=17; i++) { 
@@ -18,7 +20,17 @@ function makeTimeBlock(){
         textArea.classList.add("col-md-10","description");
         saveBtn.classList.add("col-md-1","btn", "saveBtn")
         saveBtn.innerText = "save"
-        
+        console.log(hour)
+        if (i === currentTime){
+            console.log("this must be the current block")
+            timeBlock.classList.add("present")
+        } else if (i < currentTime) {
+            timeBlock.classList.add("past")
+            
+            
+        } else {
+            timeBlock.classList.add("future")
+        }
 
         timeBlockContainer.appendChild(timeBlock) 
         timeBlock.appendChild(hour) 
