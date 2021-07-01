@@ -1,1 +1,2 @@
-# Work_Day_Scheduler
+# Work_Day_Scheduler 
+This app allows the user to make a daily schedule. The app will save the schedule to local storage and allow the user to access the same information even if they close out the page.

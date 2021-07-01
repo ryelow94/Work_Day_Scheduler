@@ -25,9 +25,7 @@ function makeTimeBlock(){
             console.log("this must be the current block")
             timeBlock.classList.add("present")
         } else if (i < currentTime) {
-            timeBlock.classList.add("past")
-            
-            
+            timeBlock.classList.add("past")  
         } else {
             timeBlock.classList.add("future")
         }
